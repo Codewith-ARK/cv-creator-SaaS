@@ -5,6 +5,12 @@
   --folio-line: #e6e9e2;
   --folio-blue: #0f62fe;
   --folio-soft-blue: #eef3fc;
+  --folio-type-caption: 12px;
+  --folio-type-small: 13px;
+  --folio-type-body: 15px;
+  --folio-type-lead: 17px;
+  --folio-type-heading: 20px;
+  --folio-type-section: 24px;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -499,4 +505,90 @@ button,a { -webkit-tap-highlight-color: transparent; }
   *,*::before,*::after { animation: none !important; transition-duration: 0ms !important; }
   .reveal { opacity: 1; transform: none; }
   .cv-card:hover,.new-cv-card:hover { transform: none; }
+}
+
+/* Shared reading scale: captions stay useful, body copy stays comfortable. */
+body { font-size: var(--folio-type-body); line-height: 1.6; }
+.small-label,.sidebar-caption,.collection-count,.career-card-top,
+.cv-card-footer,.workspace-footer,.save-indicator,.source-block-heading,
+.source-update,.document-note,.pdf-export,.demo-window-label,
+.demo-role-choice legend,.demo-detail-label,.demo-preview-toolbar,
+.sample-page-number,.closing-footnote,.auth-overline,.auth-footer,
+.landing-footer > span { font-size: var(--folio-type-caption); }
+.workspace-header,.workspace-header .quiet-link,.workspace-footer,
+.landing-nav nav a,.landing-footer-links,.auth-switch,.demo-access,
+.category-filters button,.hero-actions .text-action { font-size: var(--folio-type-small); }
+.welcome-note,.workspace-welcome h1 + p,.collection-heading p,
+.cv-card-copy > p,.new-cv-card p,.library-invitation p,.career-card > p,
+.auth-story-copy p,.auth-form-wrap h2 + p,.panel-heading p,.source-block > p,
+.panel-footnote,.outline-intro,.outline-empty p,.drop-help,
+.demo-controls > p,.workflow-copy p,.workflow-steps p,.closing-content > p { font-size: var(--folio-type-body); }
+.sidebar-note p,.sidebar-note a,.account-copy > span,.account-copy strong { font-size: var(--folio-type-caption); }
+.nav-link,.category-filters button,.demo-role-choice button,.demo-details button,
+.source-block-actions .cds--btn,.source-update .cds--btn,.mobile-editor-tabs button { font-size: var(--folio-type-small); }
+.collection-heading h2,.panel-heading h2,.document-panel-heading h2,
+.demo-controls h3,.workflow-steps h3,.career-card h3,.library-invitation h3,
+.cv-card-copy h3,.editor-heading h1 { font-weight: 600; }
+.cv-card-copy h3 { font-size: 18px; }
+.collection-heading h2,.document-panel-heading h2 { font-size: var(--folio-type-section); }
+.panel-heading h2,.career-card h3,.library-invitation h3,.workflow-steps h3 { font-size: var(--folio-type-heading); }
+.empty-state h3,.outline-empty h3,.page-loader h1 { font-weight: 500; }
+.workspace-welcome h1,.auth-story-copy h1,.auth-form-wrap h2,
+.hero-copy h1,.landing-section-copy h2,.workflow-copy h2,.closing-content h2 { font-weight: 500; }
+.workspace-welcome h1 { letter-spacing: -1px; }
+.hero-copy h1 { letter-spacing: -2.5px; }
+.landing-section-copy h2,.workflow-copy h2,.closing-content h2 { letter-spacing: -1px; }
+.auth-overline,.demo-window-label,.demo-role-choice legend,.demo-detail-label { letter-spacing: .06em; }
+.auth-form-wrap h2 { font-size: 38px; letter-spacing: -.8px; }
+.cds--label,.cds--text-input,.cds--text-area,.cds--select-input,.cds--search-input { font-size: 15px; }
+.workspace-totals span { font-size: var(--folio-type-caption); }
+.mini-role { font-size: 10px; }
+.mini-section h4 { font-size: 9px; }
+.mini-section b { font-size: 10px; }
+.mini-section p { font-size: 9px; }
+.mini-empty { font-size: 11px; }
+.sample-paper header > span,.sample-experience > span,.sample-paper .sample-company,
+.sample-skills > span { font-size: 10px; }
+.sample-paper section h4 { font-size: 10px; }
+.sample-paper section p,.sample-paper section > strong,.sample-experience { font-size: 11px; }
+.sample-paper header p { font-size: 13px; }
+.sample-paper header h3 { font-size: 28px; font-weight: 600; }
+.sample-paper { color: #26332c; }
+.auth-footer,.landing-footer > span { line-height: 1.5; }
+.editor-heading > span,.outline-section-head > span,.demo-controls .demo-status,
+.demo-preview-note,.workflow-copy .text-action,.landing-footer > div p { font-size: var(--folio-type-caption); }
+
+@media (max-width: 1100px) {
+  .save-indicator { font-size: var(--folio-type-caption); }
+}
+@media (max-width: 768px) {
+  .workspace-header,.workspace-header .quiet-link,.welcome-note,
+  .workspace-welcome h1 + p,.collection-heading .cds--btn,
+  .nav-link,.library-invitation p,.editor-heading h1,
+  .mobile-editor-tabs button,.landing-nav-actions .cds--btn,
+  .landing-benefits > span,.landing-section-copy p,.workflow-copy p,
+  .workflow-steps p,.closing-content > p { font-size: var(--folio-type-small); }
+  .collection-heading h2 { font-size: 21px; }
+  .collection-heading h2 .collection-count { font-size: var(--folio-type-caption); }
+  .collection-heading p { display: block; }
+  .library-invitation h3 { font-size: 18px; }
+  .workspace-welcome h1 { font-size: 35px; }
+  .auth-form-wrap h2 { font-size: 36px; }
+  .save-indicator { font-size: var(--folio-type-caption); }
+  .source-block > strong,.outline-section-head h3,.outline-item > strong { font-size: var(--folio-type-small); }
+  .source-block > p,.outline-intro,.outline-empty p,.drop-help,.panel-heading p,
+  .panel-footnote,.source-update,.source-block-heading,.source-update .cds--btn { font-size: var(--folio-type-caption); }
+  .document-panel-heading .small-label { font-size: var(--folio-type-caption); }
+  .document-panel-heading .cds--tag { font-size: var(--folio-type-caption); }
+  .landing-section-copy h2,.workflow-copy h2 { font-size: 39px; }
+  .workflow-steps h3 { font-size: 19px; }
+  .closing-content h2 { font-size: 45px; }
+  .demo-controls h3 { font-size: 28px; }
+  .demo-details button,.demo-role-choice button { font-size: var(--folio-type-small); }
+}
+@media (max-width: 480px) {
+  .collection-heading h2 { font-size: 20px; }
+  .hero-copy h1 { font-size: clamp(38px,10vw,46px); }
+  .source-block-actions .cds--btn { font-size: var(--folio-type-caption); }
+  .closing-content h2 { font-size: 42px; }
 }

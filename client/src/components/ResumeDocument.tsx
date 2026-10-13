@@ -2,13 +2,13 @@ import { Document, Page, Text, View, StyleSheet, Link } from "@react-pdf/rendere
 import type { BlockSchema, CV, User } from "@/lib/types";
 
 const s = StyleSheet.create({
-  page: { backgroundColor: "#fffefa", paddingTop: 48, paddingBottom: 46, paddingHorizontal: 50, color: "#252720", fontFamily: "Helvetica", fontSize: 9 },
-  name: { fontSize: 25, fontFamily: "Times-Roman", letterSpacing: -0.3 },
-  headline: { fontSize: 9, color: "#285d49", marginTop: 6, textTransform: "uppercase", letterSpacing: 1.5 },
+  page: { backgroundColor: "#fffefa", paddingTop: 48, paddingBottom: 46, paddingHorizontal: 50, color: "#252720", fontFamily: "Helvetica", fontSize: 10 },
+  name: { fontSize: 26, fontFamily: "Times-Roman", letterSpacing: -0.3 },
+  headline: { fontSize: 10, color: "#285d49", marginTop: 6, textTransform: "uppercase", letterSpacing: 1.2 },
   contacts: { flexDirection: "row", flexWrap: "wrap", marginTop: 10, marginBottom: 12 },
-  contact: { color: "#72746d", fontSize: 8, marginRight: 12, marginBottom: 4 },
-  section: { marginTop: 16 }, sectionTitle: { fontSize: 8, color: "#8f6948", letterSpacing: 1.5, textTransform: "uppercase", paddingBottom: 5, borderBottomWidth: 0.6, borderBottomColor: "#dcd9cf", marginBottom: 8 },
-  item: { marginBottom: 8 }, itemHead: { flexDirection: "row", justifyContent: "space-between", fontSize: 9, fontFamily: "Helvetica-Bold" }, sub: { color: "#66685f", fontSize: 8, marginTop: 3 }, body: { color: "#42443e", fontSize: 8, lineHeight: 1.45, marginTop: 4 }, bullet: { color: "#42443e", fontSize: 8, lineHeight: 1.4, marginLeft: 9, marginTop: 2 }, skillRow: { flexDirection: "row", flexWrap: "wrap" }, skill: { fontSize: 8, color: "#4d5148", backgroundColor: "#f1f0e9", paddingVertical: 4, paddingHorizontal: 6, marginRight: 5, marginBottom: 5, borderRadius: 2 },
+  contact: { color: "#65675f", fontSize: 9, marginRight: 12, marginBottom: 4 },
+  section: { marginTop: 16 }, sectionTitle: { fontSize: 9, color: "#805c3f", letterSpacing: 1.2, textTransform: "uppercase", paddingBottom: 5, borderBottomWidth: 0.6, borderBottomColor: "#dcd9cf", marginBottom: 8 },
+  item: { marginBottom: 9 }, itemHead: { flexDirection: "row", justifyContent: "space-between", fontSize: 10, fontFamily: "Helvetica-Bold" }, sub: { color: "#55574f", fontSize: 9, marginTop: 3 }, body: { color: "#363832", fontSize: 9.5, lineHeight: 1.5, marginTop: 4 }, bullet: { color: "#363832", fontSize: 9.5, lineHeight: 1.45, marginLeft: 9, marginTop: 2 }, skillRow: { flexDirection: "row", flexWrap: "wrap" }, skill: { fontSize: 9, color: "#40453b", backgroundColor: "#f1f0e9", paddingVertical: 4, paddingHorizontal: 6, marginRight: 5, marginBottom: 5, borderRadius: 2 },
 });
 
 function text(data: Record<string, unknown>, key: string) { const val = data[key]; return typeof val === "string" ? val : ""; }
