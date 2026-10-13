@@ -1,0 +1,15 @@
+services:
+  api:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      APP_ENV: development
+      DATABASE_URL: sqlite:////data/folio.db
+      JWT_SECRET: local-only-change-this-secret
+      CLIENT_ORIGINS: http://localhost:3000,http://localhost:3001
+    volumes:
+      - folio-data:/data
+
+volumes:
+  folio-data:
